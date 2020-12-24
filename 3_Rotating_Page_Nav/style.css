@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #333;
+  color: #222;
+}
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 500ms linear;
+  width: 100vw;
+  padding: 60px;
+  min-height: 100vh;
+}
+
+.container.show__nav {
+  transform: rotate(-20deg);
+}
+.container.show__nav .circle {
+  transform: rotate(-50deg);
+}
+
+.circle__container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 500ms linear;
+}
+
+.circle button {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 55%;
+  left: 70%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+/*NAV*/
+.container.show__nav + nav li {
+  transform: translateX(0);
+  transition: transform 500ms linear;
+}
+
+nav {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  z-index: 100;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 32px;
+}
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-2000px);
+  transition: transform 500ms linear;
+}
+
+nav ul li i {
+  font-size: 26px;
+  margin-right: 0.4rem;
+}
+
+nav ul li + li {
+  margin-left: 22px;
+}
+nav ul li + li + li {
+  margin-left: 44px;
+}
+
+.content img {
+  max-width: 100%;
+}
+.content {
+  margin-top: 1rem;
+  max-width: 1000px;
+}
+
+.content h1 {
+  margin: 0.2rem;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
