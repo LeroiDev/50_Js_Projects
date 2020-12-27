@@ -1,6 +1,5 @@
 const loadingText = document.querySelector(".loading__text"),
 backgroundImage = document.querySelector(".bg");
-
 let load = 0;
 
 let loadingIntervalCount = setInterval(() => {
